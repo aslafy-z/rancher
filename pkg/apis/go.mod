@@ -5,6 +5,7 @@ go 1.16
 replace (
 	github.com/rancher/system-upgrade-controller/pkg/apis => github.com/ibuildthecloud/system-upgrade-controller/pkg/apis v0.0.0-20200823050544-4b08ab2b5a02
 	k8s.io/client-go => k8s.io/client-go v0.20.0
+	github.com/rancher/rke => github.com/aslafy-z/rke v0.0.0-1.2-2
 )
 
 require (

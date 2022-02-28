@@ -9,7 +9,8 @@ replace (
 	github.com/opencontainers/runc => github.com/opencontainers/runc v1.0.0-rc10
 	github.com/rancher/rancher/pkg/apis => ./pkg/apis
 	github.com/rancher/rancher/pkg/client => ./pkg/client
-	golang.org/x/sys => golang.org/x/sys v0.0.0-20190921190940-14da1ac737cc // This is because docker/docker/pkg/archive has a dependency on an old x/sys
+	github.com/rancher/rke => github.com/aslafy-z/rke v0.0.0-1.2-2
+	// golang.org/x/sys => golang.org/x/sys v0.0.0-20190921190940-14da1ac737cc // This is because docker/docker/pkg/archive has a dependency on an old x/sys
 	google.golang.org/grpc => google.golang.org/grpc v1.29.1 // etcd depends on google.golang.org/grpc/naming which was removed in grpc v1.30.0
 	helm.sh/helm/v3 => github.com/rancher/helm/v3 v3.3.0-rancher1
 
@@ -47,9 +48,9 @@ require (
 	github.com/Azure/go-autorest/autorest/to v0.3.1-0.20191028180845-3492b2aff503
 	github.com/Azure/go-autorest/autorest/validation v0.2.1-0.20191028180845-3492b2aff503 // indirect
 	github.com/DataDog/zstd v1.4.5 // indirect
-	github.com/Masterminds/semver/v3 v3.1.0
-	github.com/Masterminds/sprig/v3 v3.1.0
-	github.com/aws/aws-sdk-go v1.36.7
+	github.com/Masterminds/semver/v3 v3.1.1
+	github.com/Masterminds/sprig/v3 v3.2.2
+	github.com/aws/aws-sdk-go v1.38.65
 	github.com/bep/debounce v1.2.0
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/coreos/go-semver v0.3.0
@@ -57,14 +58,14 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/docker/distribution v2.7.1+incompatible
-	github.com/docker/docker v17.12.0-ce-rc1.0.20200916142827-bd33bbf0497b+incompatible
+	github.com/docker/docker v20.10.6+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/ehazlett/simplelog v0.0.0-20200226020431-d374894e92a4
 	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-asn1-ber/asn1-ber v1.5.3 // indirect
 	github.com/go-ldap/ldap/v3 v3.4.1
-	github.com/golang/protobuf v1.4.3
+	github.com/golang/protobuf v1.5.2
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.0.0
@@ -75,7 +76,7 @@ require (
 	github.com/heptio/authenticator v0.0.0-20180409043135-d282f87a1972
 	github.com/knative/pkg v0.0.0-20190817231834-12ee58e32cc8
 	github.com/mattermost/xml-roundtrip-validator v0.0.0-20201213122252-bcd7e1b9601e
-	github.com/mattn/go-colorable v0.1.2
+	github.com/mattn/go-colorable v0.1.8
 	github.com/mattn/go-runewidth v0.0.6 // indirect
 	github.com/mcuadros/go-version v0.0.0-20180611085657-6d5863ca60fa
 	github.com/minio/minio-go/v7 v7.0.10
@@ -85,9 +86,9 @@ require (
 	github.com/pborman/uuid v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.48.0
-	github.com/prometheus/client_golang v1.7.1
+	github.com/prometheus/client_golang v1.11.0
 	github.com/prometheus/client_model v0.2.0
-	github.com/prometheus/common v0.10.0
+	github.com/prometheus/common v0.26.0
 	github.com/rancher/apiserver v0.0.0-20210924210127-09a507da41a4
 	github.com/rancher/dynamiclistener v0.2.1-0.20200910203214-85f32491cb09
 	github.com/rancher/eks-operator v1.0.9
@@ -108,8 +109,8 @@ require (
 	github.com/robfig/cron v1.1.0
 	github.com/satori/go.uuid v1.2.0
 	github.com/segmentio/kafka-go v0.0.0-20190411192201-218fd49cff39
-	github.com/sirupsen/logrus v1.6.0
-	github.com/stretchr/testify v1.6.1
+	github.com/sirupsen/logrus v1.8.1
+	github.com/stretchr/testify v1.7.0
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80
 	github.com/urfave/cli v1.22.2
 	github.com/vmihailenco/msgpack v4.0.1+incompatible
@@ -119,27 +120,26 @@ require (
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
 	github.com/xdg/stringprep v1.0.0 // indirect
 	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519
-	golang.org/x/net v0.0.0-20210315170653-34ac3e1c2000
+	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
 	golang.org/x/oauth2 v0.0.0-20201208152858-08078c50e5b5
-	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/text v0.3.5 // indirect
 	google.golang.org/api v0.40.0
-	google.golang.org/genproto v0.0.0-20210315173758-2651cd453018 // indirect
-	google.golang.org/grpc v1.34.0
+	google.golang.org/grpc v1.38.0
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
-	gopkg.in/yaml.v2 v2.3.0
+	gopkg.in/yaml.v2 v2.4.0
 	helm.sh/helm/v3 v3.3.0
-	k8s.io/api v0.20.6
+	k8s.io/api v0.22.3
 	k8s.io/apiextensions-apiserver v0.20.6
-	k8s.io/apimachinery v0.20.6
-	k8s.io/apiserver v0.20.6
+	k8s.io/apimachinery v0.22.3
+	k8s.io/apiserver v0.22.3
 	k8s.io/cli-runtime v0.20.6
 	k8s.io/client-go v12.0.0+incompatible
-	k8s.io/gengo v0.0.0-20201113003025-83324d819ded
+	k8s.io/gengo v0.0.0-20201214224949-b6c5ce23f027
 	k8s.io/helm v2.16.7+incompatible
 	k8s.io/kube-aggregator v0.20.6
-	k8s.io/kubectl v0.20.6
+	k8s.io/kubectl v0.22.3
 	k8s.io/kubernetes v1.20.6
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 	rsc.io/letsencrypt v0.0.3 // indirect

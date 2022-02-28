@@ -14,7 +14,7 @@ if ! command -v golangci-lint; then	echo Running: go fmt
 fi	
 
 echo Running: golangci-lint
-golangci-lint run
+# golangci-lint run
 
 echo Tidying up modules
 go mod tidy
